@@ -18,14 +18,14 @@
   </head>
   <body>
     <nav class="navbar">
-      <ul class="nav_firstBlock">
-        <li class="nav-item" data-image="./Assets/feather.png">Home</li>
-        <li class="nav-item" data-image="./Assets/feather.png">About</li>
-        <li class="nav-item" data-image="./Assets/feather.png">Payment</li>
-        <li class="nav-item" data-image="./Assets/feather.png">Catalog</li>
-        <li class="nav-item" data-image="./Assets/feather.png">Shop</li>
-        <li class="nav-item" data-image="./Assets/feather.png">Blog</li>
-      </ul>
+      <div class="nav_firstBlock">
+        <a class="nav-item" href="#hero">Home</a>
+        <a class="nav-item" href="#about">About</a>
+        <a class="nav-item" href="#offer">Payment</a>
+        <a class="nav-item" href="#category">Catalog</a>
+        <a class="nav-item" href="#subscribe">Shop</a>
+        <a class="nav-item" href="#blog">Blog</a>
+      </div>
       <ul class="nav_secondBlock">
         <li>
           <img src="./Assets/cart.png" alt="cart" />
@@ -38,7 +38,7 @@
         </li>
       </ul>
     </nav>
-    <section class="hero">
+    <section id="hero" class="hero">
       <h1>DREAM IN COMFORT</h1>
       <p>Creating your perfect sleep sanctuary with us</p>
       <button class="button_div">
@@ -55,7 +55,7 @@
         <img src="./Assets/icon-soft.png" alt="comfort" />
       </section>
     </section>
-    <section class="about">
+    <section id="about" class="about">
       <div class="container">
         <h2>About sleepy shop</h2>
         <p>
@@ -73,7 +73,7 @@
         <img src="./Assets/picture-about.png" alt="picture-about" />
       </div>
     </section>
-    <section class="category">
+    <section id="category" class="category">
       <div class="catalouge_title">
         <p>Our Catalouge</p>
         <div></div>
@@ -99,10 +99,80 @@
             pillows are the perfect way to end each day.
           </p>
           <div class="pillow_display">
-            
+            <div><img src="./Assets/pillow1.png" alt="pillow1" /></div>
+            <div><img src="./Assets/pillow2.png" alt="pillow2" /></div>
+            <div><img src="./Assets/pillow3.png" alt="pillow3" /></div>
+            <div><img src="./Assets/pillow4.png" alt="pillow4" /></div>
           </div>
         </div>
       </div>
+    </section>
+    <section id="offer" class="offers">
+      <div><img src="./Assets/pillow 5.png" alt="pillow5" /></div>
+      <div class="offer_detail">
+        <p class="offer_title">SAVE UP TO 70% OFF</p>
+        <div class="buy_nowButton">
+          <p class="offer_desc">
+            Our pillows are the perfect way to improve your sleep quality, and
+            now there’s even more incentive to upgrade with our 70% off offer!
+            Get cozy with a premium pillow that is soft, supportive, and durable
+            enough to last for years
+          </p>
+          <button class="button_div">
+            <div></div>
+            <p>Buy now</p>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="blog" class="blog">
+      <div class="blog_title">
+        <p>Our Blog</p>
+        <div></div>
+      </div>
+      <div class="middle_part_blog">
+        <div class="benefits_of_pillow">
+          <p class="para_title">Benefits Of Good Pillow</p>
+          <p class="paragraph">
+            There has long been speculation about the impact that sleeping on a
+            quality pillow and seeing your dreams have on each other. Some
+            people believe that when you sleep on good pillows, it allows dream
+            energy to flow freely, allowing for clearer and more vivid dreams.
+            Others maintain that a good night's sleep is simply not possible
+            without a comfortable and supportive pillow setting up the right
+            environment. Whatever your opinion, it's hard to deny that the
+            connection between dreaming and pillows should not be overlooked.
+            After all, no matter what kind of mattress you may use, if your head
+            isn't comfortably supported by a good pillow at night – then restful
+            sleep and in-depth dreams will naturally suffer. So next time you're
+            in search of better quality bed linen, don't forget to invest in
+            some solid pillows too – they could just be the key to sweet
+            dreamland!
+          </p>
+          <p id="read_more"><u>Read more</u></p>
+        </div>
+        <div>
+          <img src="./Assets/Pic-blog.png" alt="Pic-blog" />
+        </div>
+      </div>
+      <div class="sidebar">
+        <img src="./Assets/slidebar.png" />
+      </div>
+    </section>
+    <section id="subscribe" class="subscribe">
+      <p class="p1">Subscribe To Get The Latest News About Us</p>
+      <p class="p2">
+        Sign up for our newsletter & knowing about offers We never spam your
+        inbox, so don't worry.
+      </p>
+      <input type="text" placeholder="Enter your email">
+      <button class="subscribe_button">
+        <div></div>
+        <p>Subscribe Now</p>
+      </button>
+    </section>
+    <section class="footer">
+
     </section>
   </body>
   <script src="./index.js"></script>

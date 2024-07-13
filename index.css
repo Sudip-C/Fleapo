@@ -4,13 +4,16 @@ body{
     background: rgba(55, 91, 104, 1);
     color: #F5F7FA;
 }
-nav li{
+nav a{
     font-family: 'Cabinet Grotesk',sans-serif;
     font-size: 20px;
     font-weight: 500;
     line-height: 24.8px;
     text-align: left;
-    list-style: none;}
+    text-decoration: none;
+    color: #F5F7FA;
+    ;
+}
 .navbar{
 display: flex;
 justify-content: space-between;
@@ -27,6 +30,7 @@ font-family:'Cabinet Grotesk',sans-serif;
     gap: 5px;
     Padding:35px 66px 0px 0px;
     align-items: end;
+    list-style: none;
 }
 .hero{
     display: flex;
@@ -54,19 +58,17 @@ font-family: 'Sahitya',sans-serif;
 .button_div{
     display: flex;
     border: none;
-    background: rgba(79, 126, 142, 1);
-    color: rgba(245, 247, 250, 1);
+    background-color: inherit;    color: rgba(245, 247, 250, 1);
     gap: 5px;
+    height: 68px;
+    width: 138px;
 }
 .button_div>div{
 width: 58.14px;
 height: 58.14px;
 top: 4.93px;
 left: 4.93px;
-gap: 0px;
 border-radius: 50%;
-border: 0.99px 0px 0px 0px;
-opacity: 0px;
 border: 0.99px solid white;
 }
 .hero_pic{
@@ -100,6 +102,10 @@ border: 0.99px solid white;
 #read_more{
 display: block;
 text-align: right;
+font-family: 'Cabinet Grotesk',sans-serif;
+font-size: 22px;
+font-weight: 700;
+line-height: 44px;
 }
 .category{
     padding: 144px 64px 0px 64px;
@@ -120,7 +126,6 @@ text-align: right;
     height: 78px;
     border-bottom: 1.5px solid transparent ;
     border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;
-
     }
 
 .our_categories{
@@ -161,5 +166,204 @@ display: flex;
     text-align: justify;
 
 }
-/*57735899903
-499238126451
+.pillow_display{
+    display: flex;
+    left: 42.1px;
+    padding: 4.86px 9.72px 4.86px 9.72px;
+    gap: 41px;
+
+}
+.pillow_display div{
+    width: 50%;
+    transition: transform 0.2s linear;
+    border-radius: 20px 20px ;
+    margin-top: 30px;
+}
+.pillow_display div:hover{
+    border: 1px solid transparent ;
+    border-radius: 20px 20px 0px 0px ;
+    border-image: linear-gradient(179.18deg, rgba(245, 247, 250, 1) 8.94%, rgba(245, 247, 250, 0) 95.23%) 1 round;
+    transform: scale(1.1);
+}
+.pillow_display img{
+    width: 100%;
+}
+
+
+.offers{
+height: 768px;
+top: 2653px;
+padding: 144px 0px 0px 0px;
+gap: 10px;
+opacity: 0px;
+
+}
+.offers img{
+    width: 100%;
+    position: absolute;
+    height: 624px;
+}
+.offer_detail{
+    height: 400px;
+    width:50%;
+    position: relative;
+    left: 47.5%;
+}
+.offer_title{
+width: fit-content;
+height: 96px;
+top: 95px;
+left: 684px;
+gap: 0px;
+opacity: 0px;
+font-family: 'Cabinet Grotesk',sans-serif;
+font-size: 48px;
+font-weight: 700;
+line-height: 96px;
+text-align: left;
+}
+.offer_desc{
+    width: 441px;
+height: 197px;
+top: 214px;
+left: 684px;
+font-family: 'Cabinet Grotesk',sans-serif;
+font-size: 24px;
+font-weight: 300;
+line-height: 29.76px;
+text-align: left;
+
+}
+.buy_nowButton{
+    height: 55%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.blog{
+    height: 690px;
+    width: 1,440px;
+    padding: 144px 64px 36px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blog_title{
+    display: flex;
+    gap: 10px;
+}
+.blog_title p{
+    font-family: 'Cabinet Grotesk',sans-serif;
+font-size: 36px;
+font-weight: 800;
+line-height: 72px;
+text-align: left;
+
+}
+.blog_title div{
+    width: 660px;
+    height: 78px;
+    /* top: 40px; */
+    border-bottom: 1.5px solid transparent ;
+    border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;   
+}
+.middle_part_blog{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.benefits_of_pillow{
+
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+.para_title{
+    font-family: 'Cabinet Grotesk',sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 72px;
+    text-align: left;
+}
+.paragraph{
+    font-family: "Cabinet Grotesk",sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    text-align: justify;
+
+}
+.sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe{
+    width: 1,440px;
+    height: 601px;
+    padding: 144px 336px 0px 336px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 49px;
+}
+.subscribe .p1{
+    font-family: 'Cabinet Grotesk',sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 48px;
+    text-align: center;
+
+}
+.subscribe .p2{
+    width: 438px;
+    font-family: 'Cabinet Grotesk',sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24.8px;
+    text-align: center;
+
+}
+.subscribe input{
+width:768px;
+height:  81px;
+padding: 8px 38px 8px 38px;
+gap: 10px;
+background-color: rgba(79, 126, 142, 0.35);
+border: 3px solid  ;
+/* border-image: linear-gradient(94.43deg, #A3A3A3 16.78%, #CCCCCC 32.75%, #FFFFFF 48.53%, #CCCCCC 62.7%, #A3A3A3 80.36%) 1 round; */
+border-radius: 40px;
+font-family: 'Cabinet Grotesk',sans-serif;
+font-size: 24px;
+font-weight: 400;
+line-height: 37px;
+text-align: left;
+}
+.subscribe_button{
+    display: flex;
+    background-color: inherit;
+    width:  169px;
+height:  68px;
+padding: 4.93px 0px 0px 0px;
+gap: 8px;
+color: white;
+border: none;
+}
+.subscribe_button div{
+width: 58.14px;
+height: 58.14px;
+top: 4.93px;
+left: 4.93px;
+border-radius: 50%;
+border: 1px solid white;
+}
+ 
+
+
+
+/*border: 0.99px solid;
+
+border-image-source: linear-gradient(94.43deg, #A3A3A3 16.78%, #CCCCCC 32.75%, #FFFFFF 48.53%, #CCCCCC 62.7%, #A3A3A3 80.36%);
+
