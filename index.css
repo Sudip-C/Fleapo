@@ -1,0 +1,165 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: rgba(55, 91, 104, 1);
+    color: #F5F7FA;
+}
+nav li{
+    font-family: 'Cabinet Grotesk',sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.8px;
+    text-align: left;
+    list-style: none;}
+.navbar{
+display: flex;
+justify-content: space-between;
+color: #F5F7FA;
+font-family:'Cabinet Grotesk',sans-serif;
+}
+.nav_firstBlock{
+    padding:35px 66px 0px 66px;
+    display: flex;
+    gap: 8px;
+}
+.nav_secondBlock{
+    display: flex;
+    gap: 5px;
+    Padding:35px 66px 0px 0px;
+    align-items: end;
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero > h1{
+line-height: 99.39px;
+font-weight: 700;
+font-size: 64px;
+background: linear-gradient(180deg, rgba(121, 121, 121, 0.4) 20.25%, #ABABAB 69.58%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: 'Sahitya',sans-serif;
+}
+.hero > p{
+    text-align: center;
+    font-family: "Sahitya",sans-serif;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    line-height: 31.06px;
+
+}
+.button_div{
+    display: flex;
+    border: none;
+    background: rgba(79, 126, 142, 1);
+    color: rgba(245, 247, 250, 1);
+    gap: 5px;
+}
+.button_div>div{
+width: 58.14px;
+height: 58.14px;
+top: 4.93px;
+left: 4.93px;
+gap: 0px;
+border-radius: 50%;
+border: 0.99px 0px 0px 0px;
+opacity: 0px;
+border: 0.99px solid white;
+}
+.hero_pic{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    background-image: url('./Assets/Feather-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.about_quality{
+    display: flex;
+    gap: 27px;
+}
+
+.about{
+    font-family:'Cabinet Grotesk',sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+.container{
+    margin-left:50px ;
+    line-height: 40px;
+}
+.container h2{
+    font-size: 24px;
+    line-height: 48px1;
+}
+#read_more{
+display: block;
+text-align: right;
+}
+.category{
+    padding: 144px 64px 0px 64px;
+}
+.catalouge_title{
+    display: flex;
+    gap: 10px;
+}
+.catalouge_title p{
+    font-size: 36px;
+    line-height: 72px;
+    font-weight: 800;
+    font-family: 'Cabinet Grotesk',sans-serif;
+    color: rgba(94, 151, 171, 1);
+}
+.catalouge_title  div{
+    width: 660px;
+    height: 78px;
+    border-bottom: 1.5px solid transparent ;
+    border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;
+
+    }
+
+.our_categories{
+display: flex;
+}
+.selectors{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 25px;
+    padding: 0px 0px 30px 19px;
+}
+.selectors div{
+    width: 100%;
+    padding: 0px 10px;
+    display: block;
+    align-items: center;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.selectors div:hover{
+    background: linear-gradient(89.87deg, #436E7E 10.28%, #12212E 89.59%);
+}
+.description{
+    padding: 10px 20px;
+    background: linear-gradient(180.08deg, #12212E 41.88%, #375B68 92.6%);
+    font-family: 'Cabinet Grotesk',sans-serif;
+    border-radius: 0px 36px 36px 36px;
+}
+.description .selector_title{
+    font-size: 24px;
+}
+.description .para{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: justify;
+
+}
+/*57735899903
+499238126451
