@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
-    <link
-      href="https://fonts.cdnfonts.com/css/cabinet-grotesk"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -42,18 +39,18 @@
       <h1>DREAM IN COMFORT</h1>
       <p>Creating your perfect sleep sanctuary with us</p>
       <button class="button_div">
-        <div></div>
-        <p>shop now</p>
+        <img src="./Assets/button.svg"/>      
       </button>
       <section class="hero_pic">
         <img src="./Assets/Hero-pic.png" />
-        <!-- <img src="./Assets/Feather-bg.png" alt=""> -->
       </section>
       <section class="about_quality">
-        <img src="./Assets/icon- healtysleep.png" alt="sleep" />
-        <img src="./Assets/icon-cotton.png" alt="cotton" />
-        <img src="./Assets/icon-tailoring.png" alt="Tailoring" />
-        <img src="./Assets/icon-soft.png" alt="comfort" />
+        <div>
+          <img src="./Assets/icon- healtysleep.png" alt="sleep" />
+        </div>
+        <div><img src="./Assets/icon-cotton.png" alt="cotton" /></div>
+        <div><img src="./Assets/icon-tailoring.png" alt="Tailoring" /></div>
+        <div><img src="./Assets/icon-soft.png" alt="comfort" /></div>
       </section>
     </section>
     <section id="about" class="about">
@@ -77,7 +74,7 @@
     <section id="category" class="category">
       <div class="catalouge_title">
         <p>Our Catalouge</p>
-        <div></div>
+        <img src="./Assets/Line 1.svg" />
       </div>
       <div class="our_categories">
         <div class="selectors">
@@ -100,16 +97,42 @@
             pillows are the perfect way to end each day.
           </p>
           <div class="pillow_display">
-            <div><img src="./Assets/pillow1.png" alt="pillow1" /></div>
-            <div><img src="./Assets/pillow2.png" alt="pillow2" /></div>
-            <div><img src="./Assets/pillow3.png" alt="pillow3" /></div>
-            <div><img src="./Assets/pillow4.png" alt="pillow4" /></div>
+            <div class="card"><img src="./Assets/pillow1.png" alt="pillow1" />
+              <div class="card_detail">
+                <span>Hotel Quality Pillow</span>
+                <span>$125</span>
+                <div> <img src="./Assets/cart_logo.svg" alt=""></div>
+              </div>
+            </div>
+            <div class="card"><img src="./Assets/pillow2.png" alt="pillow2" />
+              <div class="card_detail">
+                <span>Hotel Quality Pillow</span>
+                <span>$125</span>
+                <div><img src="./Assets/cart_logo.svg" alt="">
+                </div> </div>
+            </div>
+            <div class="card"><img src="./Assets/pillow3.png" alt="pillow3" />
+              <div class="card_detail">
+                <span>Hotel Quality Pillow</span>
+                <span>$125</span>
+                <div> <img src="./Assets/cart_logo.svg" alt=""></div>
+              </div>
+            </div>
+            <div class="card"><img src="./Assets/pillow4.png" alt="pillow4" />
+              <div class="card_detail">
+              <span>Hotel Quality Pillow</span>
+              <span>$125</span>
+              <div><img src="./Assets/cart_logo.svg" alt=""> </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
     </section>
     <section id="offer" class="offers">
-      <div><img src="./Assets/pillow 5.png" alt="pillow5" /></div>
+      <div>
+        <img class="main_image" src="./Assets/pillow 5.png" alt="pillow5" />
+      </div>
       <div class="offer_detail">
         <p class="offer_title">SAVE UP TO 70% OFF</p>
         <div class="buy_nowButton">
@@ -119,17 +142,17 @@
             Get cozy with a premium pillow that is soft, supportive, and durable
             enough to last for years
           </p>
-          <button class="button_div">
-            <div></div>
-            <p>Buy now</p>
-          </button>
+          <img class="button_image" src="./Assets/button2.svg"/>
+
+            
+         
         </div>
       </div>
     </section>
     <section id="blog" class="blog">
       <div class="blog_title">
         <p>Our Blog</p>
-        <div></div>
+        <img src="./Assets/Line 1.svg"></img>
       </div>
       <div class="middle_part_blog">
         <div class="benefits_of_pillow">
@@ -168,8 +191,7 @@
       </p>
       <input type="text" placeholder="Enter your email">
       <button class="subscribe_button">
-        <div></div>
-        <p>Subscribe Now</p>
+        <img src="./Assets/Subscribe_button.svg"/>
       </button>
     </section>
     <footer class="footer">
@@ -210,6 +232,12 @@
                 <p>+1-222-34-sleep</p>
               </div>
             </div>
+        </div>
+        <div class="social_media">
+          <span>Social Media:</span>
+          <img src="./Assets/linkdin.svg" alt="">
+          <img src="./Assets/pinterest.svg" alt="">
+          <img src="./Assets/insta.svg" alt="">
         </div>
         <div class="copyright">
             <p class="created_by">Created By ElinaUi9</p>

@@ -66,21 +66,13 @@ font-family: 'Sahitya',sans-serif;
 
 }
 .button_div{
-    display: flex;
     border: none;
-    background-color: inherit;    color: rgba(245, 247, 250, 1);
-    gap: 5px;
+    background-color: inherit;
+    color: rgba(245, 247, 250, 1);
     height: 68px;
     width: 138px;
 }
-.button_div>div{
-width: 58.14px;
-height: 58.14px;
-top: 4.93px;
-left: 4.93px;
-border-radius: 50%;
-border: 0.99px solid white;
-}
+
 .hero_pic{
     width: 95%;
     display: flex;
@@ -90,10 +82,14 @@ border: 0.99px solid white;
     background-size: cover;
 }
 .about_quality{
+    width: 46%;
     display: flex;
-    gap: 27px;
+    justify-content: center;
+    padding: 30px;
 }
-
+.about_quality div{
+    width: 25%;
+}
 .about{
     font-family:'Cabinet Grotesk',sans-serif;
     display: flex;
@@ -107,7 +103,16 @@ border: 0.99px solid white;
 }
 .container h2{
     font-size: 24px;
-    line-height: 48px1;
+    line-height: 48px;
+    font-weight: 700;
+}
+.container p{
+    font-family: 'Cabinet Grotesk',sans-serif;
+font-size: 20px;
+font-weight: 400;
+line-height: 40px;
+text-align: justified;
+
 }
 #read_more{
 display: block;
@@ -122,6 +127,7 @@ line-height: 44px;
 }
 .catalouge_title{
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 .catalouge_title p{
@@ -131,12 +137,6 @@ line-height: 44px;
     font-family: 'Cabinet Grotesk',sans-serif;
     color: rgba(94, 151, 171, 1);
 }
-.catalouge_title  div{
-    width: 660px;
-    height: 78px;
-    border-bottom: 1.5px solid transparent ;
-    border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;
-    }
 
 .our_categories{
 display: flex;
@@ -183,19 +183,45 @@ display: flex;
     gap: 41px;
 
 }
-.pillow_display div{
+
+ .card{
     width: 50%;
     transition: transform 0.2s linear;
     border-radius: 20px 20px ;
     margin-top: 30px;
+    position: relative;
+    overflow: hidden;
 }
-.pillow_display div:hover{
-    border: 1px solid transparent ;
+.card_detail{
+    height: 32px;
+    width: 98%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.card_detail div{
+    margin-left: 5px;
+    width: 10%;
+}
+
+.card_detail span{
+    font-size:16px;
+    font-weight:500;
+    font-family:"Cabinet Grotesk",sans-serif
+}
+.card:hover .card_detail{
+    display: flex;
+}
+.card:hover{
+    border: 1px solid rgb(230, 228, 228) ;
     border-radius: 20px 20px 0px 0px ;
-    border-image: linear-gradient(179.18deg, rgba(245, 247, 250, 1) 8.94%, rgba(245, 247, 250, 0) 95.23%) 1 round;
-    transform: scale(1.1);
+    transform: scale(1.05);
+    border-bottom: none;
 }
-.pillow_display img{
+.card img{
     width: 100%;
 }
 
@@ -205,13 +231,16 @@ height: 768px;
 top: 2653px;
 padding: 144px 0px 0px 0px;
 gap: 10px;
-opacity: 0px;
 
 }
-.offers img{
+.offers .main_image{
     width: 100%;
     position: absolute;
     height: 624px;
+}
+.offers .button_image{
+    position: relative;
+   bottom: 20%;
 }
 .offer_detail{
     height: 400px;
@@ -222,10 +251,8 @@ opacity: 0px;
 .offer_title{
 width: fit-content;
 height: 96px;
-top: 95px;
-left: 684px;
-gap: 0px;
-opacity: 0px;
+top: 96px;
+left: 47%;
 font-family: 'Cabinet Grotesk',sans-serif;
 font-size: 48px;
 font-weight: 700;
@@ -233,10 +260,10 @@ line-height: 96px;
 text-align: left;
 }
 .offer_desc{
-    width: 441px;
-height: 197px;
+width: 441px;
+height: 200px;
 top: 214px;
-left: 684px;
+left: 47%;
 font-family: 'Cabinet Grotesk',sans-serif;
 font-size: 24px;
 font-weight: 300;
@@ -248,10 +275,13 @@ text-align: left;
     height: 55%;
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items:  end;
+    top: 50%;
 }
+
+
 .blog{
-    height: 750px;
+    height: 900px;
     width: 100%;
     padding: 100px 64px 36px 64px;
     display: flex;
@@ -261,6 +291,7 @@ text-align: left;
 
 .blog_title{
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 .blog_title p{
@@ -271,13 +302,7 @@ line-height: 72px;
 text-align: left;
 color: rgba(94, 151, 171, 1);
 }
-.blog_title div{
-    width: 660px;
-    height: 78px;
-    /* top: 40px; */
-    border-bottom: 1.5px solid transparent ;
-    border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;   
-}
+
 .middle_part_blog{
     display: flex;
     justify-content: center;
@@ -293,7 +318,7 @@ gap: 8px;
     font-family: 'Cabinet Grotesk',sans-serif;
     font-size: 30px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 72px;
     text-align: left;
 }
 .paragraph{
@@ -301,7 +326,7 @@ gap: 8px;
     font-size: 18px;
     font-weight: 500;
     line-height: 36px;
-    text-align: justify;
+    text-align: left;
 
 }
 .sidebar{
@@ -352,25 +377,14 @@ line-height: 37px;
 text-align: left;
 }
 .subscribe_button{
-    display: flex;
+    border: none;
     background-color: inherit;
     width:  169px;
 height:  68px;
-padding: 4.93px 0px 0px 0px;
-gap: 8px;
-color: white;
-border: none;
-}
-.subscribe_button div{
-width: 58.14px;
-height: 58.14px;
-top: 4.93px;
-left: 4.93px;
-border-radius: 50%;
-border: 1px solid white;
 }
  
 .footer{
+    border: 2px soid red;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -399,12 +413,15 @@ background: linear-gradient(180deg, rgba(55, 91, 104, 0) 0%, rgba(18, 33, 46, 0.
 font-size: 16px;
 font-weight: 400;
 line-height: 20.48px;
+color: rgba(245, 247, 250, 0.55);
+
 }
 .copyright_note{
     font-family: 'sahitya',sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 20.48px;
+    color: rgba(245, 247, 250, 0.55);
 }
 
 .footer_items{
@@ -417,6 +434,15 @@ line-height: 20.48px;
     justify-content: space-around;
     align-items: center;
     gap: 37px;
+}
+.social_media{
+    display: flex;
+    width: 210px;
+    gap: 8px;
+    position: relative;
+    top:42% ;
+    left: 80%;
+    font-family: 'Cabinet Grotesk',sans-serif;
 }
 .about_div{
 display:flex;
@@ -454,16 +480,22 @@ line-height: 19.84px;
 }
 .footer_items h3{
     font-family: 'Cabinet Grotesk',sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24.8px;
 }
 .footer_items p{
     font-family: 'Sahitya',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20.48px;
 }
 .footer_items p:hover{
     cursor:pointer;
 }
 
 /* for medium screen*/
-@media (min-width:501px) and (max-width:1200px) {
+@media (min-width:500px) and (max-width:1199px) {
     *{
         box-sizing: border-box;
     }
@@ -534,21 +566,13 @@ line-height: 19.84px;
     
     }
     .button_div{
-        display: flex;
         border: none;
-        background-color: inherit;    color: rgba(245, 247, 250, 1);
-        gap: 5px;
+        background-color: inherit; 
+        color: rgba(245, 247, 250, 1);
         height: 68px;
         width: 138px;
     }
-    .button_div>div{
-    width: 58.14px;
-    height: 58.14px;
-    top: 4.93px;
-    left: 4.93px;
-    border-radius: 50%;
-    border: 0.99px solid white;
-    }
+  
     .hero_pic{
         width: 100%;
         background-image: url('./Assets/Feather-bg.png');
@@ -563,10 +587,9 @@ line-height: 19.84px;
         justify-content: center;
         gap: 10px;
         width: 60%;
-        padding: 20px 10px;
     }
     .about_quality img{
-        width: 20%;
+        width: 100%;
     }
     
     .about{
@@ -604,20 +627,20 @@ line-height: 19.84px;
     }
     .catalouge_title{
         display: flex;
-        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
     }
     .catalouge_title p{
-        font-size: 36px;
-        line-height: 72px;
+        width: 40%;
+        font-size: 30px;
+        line-height: 50px;
         font-weight: 800;
         font-family: 'Cabinet Grotesk',sans-serif;
         color: rgba(94, 151, 171, 1);
     }
-    .catalouge_title  div{
-        width: 40%;
-        height: 80px;
-        border-bottom: 2px solid transparent ;
-        border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;
+    .catalouge_title  img{
+        width: 50%;
         }
     
     .our_categories{
@@ -665,19 +688,42 @@ line-height: 19.84px;
         gap: 41px;
     
     }
-    .pillow_display div{
+    .card{
         width: 50%;
         transition: transform 0.2s linear;
         border-radius: 20px 20px ;
         margin-top: 30px;
+        position: relative;
+        overflow: hidden;
     }
-    .pillow_display div:hover{
+    .card_detail{
+        height: 32px;
+        width: 98%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        
+    }
+    .card_detail div{
+        margin-left: 5px;
+        width: 15%;
+    }
+    .card_detail span{
+        font-size:10px;
+        font-weight:500;
+        font-family:"Cabinet Grotesk",sans-serif
+    }
+    .card:hover .card_detail{
+        display: flex;
+    }
+    .card:hover{
         border: 1px solid transparent ;
         border-radius: 20px 20px 0px 0px ;
-        border-image: linear-gradient(179.18deg, rgba(245, 247, 250, 1) 8.94%, rgba(245, 247, 250, 0) 95.23%) 1 round;
+        border-image: linear-gradient(179.18deg, rgba(245, 247, 250, 1) 8.94%, rgba(245, 247, 250, 0) 95.23%) 1 stretch;
         transform: scale(1.1);
     }
-    .pillow_display img{
+    .card img{
         width: 100%;
     }
     
@@ -687,10 +733,14 @@ line-height: 19.84px;
     height: 760px;
     padding: 100px 0px 0px 0px;
     }
-    .offers img{
+    .offers .main_image{
         width: 100%;
         position: absolute;
         height: 624px;
+    }
+    .offers .button_image{
+        position: relative;
+       bottom: 20%;
     }
     .offer_detail{
         height: 300px;
@@ -700,7 +750,7 @@ line-height: 19.84px;
         justify-content: space-between;
         position: relative;
         left: 47.5%;
-        top: 19%;
+        top: 18%;
     }
     .offer_title{
     width: fit-content;
@@ -717,11 +767,11 @@ line-height: 19.84px;
     width: 441px;
     height: 197px;
     top: 214px;
-    left: 684px;
+    left: 47%;
     font-family: 'Cabinet Grotesk',sans-serif;
     font-size: 18px;
     font-weight: 300;
-    line-height: 29.76px;
+    line-height: 24px;
     text-align: left;
 
     }
@@ -730,6 +780,8 @@ line-height: 19.84px;
         display: flex;
         justify-content: space-between;
         align-items: end;
+        align-items:  end;
+        top: 50%;
     }
     .blog{
         height: 900px;
@@ -742,23 +794,21 @@ line-height: 19.84px;
     
     .blog_title{
         display: flex;
-        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
     }
     .blog_title p{
-        width: 50%;
+        width: 30%;
         font-family: 'Cabinet Grotesk',sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 800;
-    line-height: 72px;
+    line-height: 60px;
     text-align: left;
     
     }
-    .blog_title div{
-        width: 660px;
-        height: 78px;
-        /* top: 40px; */
-        border-bottom: 1.5px solid transparent ;
-        border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;   
+    .blog_title img{
+        width: 70%;
     }
     .middle_part_blog{
         display: flex;
@@ -876,12 +926,22 @@ line-height: 19.84px;
         top: 40%;
         position: absolute;
     }
+    .social_media{
+        display: flex;
+        width: 210px;
+        gap: 8px;
+        position: relative;
+        top:42% ;
+        left: 70%;
+        font-family: 'Cabinet Grotesk',sans-serif;
+    }
     .copyright{
         position: absolute;
         left: 30%;
         top: 85%;
         text-align: center;
     }
+
     .created_by{
         font-family: 'sahitya',sans-serif;
     font-size: 16px;
@@ -904,12 +964,11 @@ line-height: 19.84px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 37px;
+        gap: 25px;
     }
     .about_div{
     display:flex;
     flex-direction:column;
-    
     }
     .recourse_div{
     display:flex;
@@ -921,18 +980,18 @@ line-height: 19.84px;
     }
     .contact_div{
     height: 100%;
-    padding: 10px 30px;
+    padding: 10px 20px;
     display:flex;
     flex-direction:column;
     }
     .contact_section{
-    padding: 10px 8px 10px 8px;
-    gap: 10px;
+    padding: 8px 6px 8px 6px;
+    gap: 6px;
     display: flex;
     justify-content:flex-start;
     align-items: center;
     font-family: "Cabinet Grotesk",sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 19.84px;
     }
@@ -942,9 +1001,15 @@ line-height: 19.84px;
     }
     .footer_items h3{
         font-family: 'Cabinet Grotesk',sans-serif;
+        font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
     }
     .footer_items p{
         font-family: 'Sahitya',sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
     }
     .footer_items p:hover{
         cursor:pointer;
@@ -953,7 +1018,7 @@ line-height: 19.84px;
 }
 
 /* for small screen*/
-@media (min-width:300px) and (max-width:500px) {
+@media (min-width:300px) and (max-width:499px) {
     *{
         box-sizing: border-box;
     }
@@ -1024,21 +1089,13 @@ line-height: 19.84px;
     
     }
     .button_div{
-        display: flex;
         border: none;
-        background-color: inherit;    color: rgba(245, 247, 250, 1);
-        gap: 5px;
+        background-color: inherit; 
+        color: rgba(245, 247, 250, 1);
         height: 68px;
         width: 138px;
     }
-    .button_div>div{
-    width: 58.14px;
-    height: 58.14px;
-    top: 4.93px;
-    left: 4.93px;
-    border-radius: 50%;
-    border: 0.99px solid white;
-    }
+  
     .hero_pic{
         width: 100%;
         background-image: url('./Assets/Feather-bg.png');
@@ -1053,10 +1110,9 @@ line-height: 19.84px;
         justify-content: center;
         gap: 10px;
         width: 60%;
-        padding: 20px 10px;
     }
     .about_quality img{
-        width: 20%;
+        width: 100%;
     }
     
     .about{
@@ -1094,20 +1150,20 @@ line-height: 19.84px;
     }
     .catalouge_title{
         display: flex;
-        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
     }
     .catalouge_title p{
-        font-size: 36px;
-        line-height: 72px;
+        width: 40%;
+        font-size: 30px;
+        line-height: 50px;
         font-weight: 800;
         font-family: 'Cabinet Grotesk',sans-serif;
         color: rgba(94, 151, 171, 1);
     }
-    .catalouge_title  div{
-        width: 40%;
-        height: 80px;
-        border-bottom: 2px solid transparent ;
-        border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;
+    .catalouge_title  img{
+        width: 50%;
         }
     
     .our_categories{
@@ -1155,74 +1211,105 @@ line-height: 19.84px;
         gap: 41px;
     
     }
-    .pillow_display div{
+    .card{
         width: 50%;
         transition: transform 0.2s linear;
         border-radius: 20px 20px ;
         margin-top: 30px;
+        position: relative;
+        overflow: hidden;
     }
-    .pillow_display div:hover{
+    .card_detail{
+        height: 32px;
+        width: 98%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        
+    }
+    .card_detail div{
+        margin-left: 5px;
+        width: 15%;
+    }
+    .card_detail span{
+        font-size:10px;
+        font-weight:500;
+        font-family:"Cabinet Grotesk",sans-serif
+    }
+    .card:hover .card_detail{
+        display: flex;
+    }
+    .card:hover{
         border: 1px solid transparent ;
         border-radius: 20px 20px 0px 0px ;
-        border-image: linear-gradient(179.18deg, rgba(245, 247, 250, 1) 8.94%, rgba(245, 247, 250, 0) 95.23%) 1 round;
+        border-image: linear-gradient(179.18deg, rgba(245, 247, 250, 1) 8.94%, rgba(245, 247, 250, 0) 95.23%) 1 stretch;
         transform: scale(1.1);
     }
-    .pillow_display img{
+    .card img{
         width: 100%;
     }
     
     
     .offers{
-     width: 100%;
+     width:100%;
     height: 760px;
     padding: 100px 0px 0px 0px;
     }
-    .offers img{
-        width: min-content;
+    .offers .main_image{
+        width: 100%;
         position: absolute;
         height: 624px;
     }
+    .offers .button_image{
+        position: relative;
+       bottom: 20%;
+    }
     .offer_detail{
-        height: 400px;
+        height: 300px;
         width:50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         position: relative;
         left: 47.5%;
+        top: 18%;
     }
     .offer_title{
     width: fit-content;
-    height: 96px;
-    top: 95px;
+    height: 55px;
+    top: 75px;
     left: 684px;
-    gap: 0px;
-    opacity: 0px;
     font-family: 'Cabinet Grotesk',sans-serif;
-    font-size: 48px;
+    font-size: 35px;
     font-weight: 700;
-    line-height: 96px;
+    line-height: 45px;
     text-align: left;
     }
     .offer_desc{
-        width: 441px;
+    width: 441px;
     height: 197px;
     top: 214px;
-    left: 684px;
+    left: 47%;
     font-family: 'Cabinet Grotesk',sans-serif;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 300;
-    line-height: 29.76px;
+    line-height: 24px;
     text-align: left;
-    
+
     }
     .buy_nowButton{
         height: 55%;
         display: flex;
         justify-content: space-between;
         align-items: end;
+        align-items:  end;
+        top: 50%;
     }
     .blog{
-        height: 750px;
+        height: 900px;
         width: 100%;
-        padding: 100px 64px 36px 64px;
+        padding: 50px 30px 36px 30px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -1230,46 +1317,51 @@ line-height: 19.84px;
     
     .blog_title{
         display: flex;
-        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
     }
     .blog_title p{
+        width: 30%;
         font-family: 'Cabinet Grotesk',sans-serif;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 800;
-    line-height: 72px;
+    line-height: 60px;
     text-align: left;
     
     }
-    .blog_title div{
-        width: 660px;
-        height: 78px;
-        /* top: 40px; */
-        border-bottom: 1.5px solid transparent ;
-        border-image: linear-gradient(90deg, #5E97AB 8.94%, rgba(94, 151, 171, 0) 95.23%) 1 round;   
+    .blog_title img{
+        width: 70%;
     }
     .middle_part_blog{
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: 5px;
     }
     .benefits_of_pillow{
+    width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    
+    justify-content: space-around;
+    gap: 5px;
+    padding: 10px;
+    }
+    .middle_part_blog img{
+        width: 100%;
     }
     .para_title{
         font-family: 'Cabinet Grotesk',sans-serif;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 700;
-        line-height: 60px;
+        line-height: 35px;
         text-align: left;
     }
     .paragraph{
         font-family: "Cabinet Grotesk",sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         font-weight: 500;
-        line-height: 36px;
+        line-height: 25px;
         text-align: justify;
     
     }
@@ -1283,7 +1375,7 @@ line-height: 19.84px;
     .subscribe{
         width: 100%;
         height: 601px;
-        padding: 144px 336px 10px 336px;
+        padding: 50px 100px 10px 100px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1357,12 +1449,22 @@ line-height: 19.84px;
         top: 40%;
         position: absolute;
     }
+    .social_media{
+        display: flex;
+        width: 210px;
+        gap: 8px;
+        position: relative;
+        top:42% ;
+        left: 70%;
+        font-family: 'Cabinet Grotesk',sans-serif;
+    }
     .copyright{
         position: absolute;
-        left: 40%;
+        left: 30%;
         top: 85%;
         text-align: center;
     }
+
     .created_by{
         font-family: 'sahitya',sans-serif;
     font-size: 16px;
@@ -1385,12 +1487,11 @@ line-height: 19.84px;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        gap: 37px;
+        gap: 25px;
     }
     .about_div{
     display:flex;
     flex-direction:column;
-    
     }
     .recourse_div{
     display:flex;
@@ -1402,18 +1503,18 @@ line-height: 19.84px;
     }
     .contact_div{
     height: 100%;
-    padding: 10px 30px;
+    padding: 10px 20px;
     display:flex;
     flex-direction:column;
     }
     .contact_section{
-    padding: 10px 8px 10px 8px;
-    gap: 10px;
+    padding: 8px 6px 8px 6px;
+    gap: 6px;
     display: flex;
     justify-content:flex-start;
     align-items: center;
     font-family: "Cabinet Grotesk",sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 19.84px;
     }
@@ -1423,9 +1524,15 @@ line-height: 19.84px;
     }
     .footer_items h3{
         font-family: 'Cabinet Grotesk',sans-serif;
+        font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
     }
     .footer_items p{
         font-family: 'Sahitya',sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
     }
     .footer_items p:hover{
         cursor:pointer;
