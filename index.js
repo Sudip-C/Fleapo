@@ -193,16 +193,16 @@ function isInViewport(element) {
 
 function animateImage() {
   if (isInViewport(picture_about)) {
-    image.classList.add('animate-image'); // Add a CSS class to trigger animation
+    image.classList.add('animate-image'); 
   } else {
-    image.classList.remove('animate-image'); // Remove the CSS class if not in view
+    image.classList.remove('animate-image'); 
   }
 }
 function animateText() {
     if (isInViewport(about_text)) {
-      about_text.classList.add('animate-text'); // Add a CSS class to trigger animation
+      about_text.classList.add('animate-text'); 
     } else {
-      about_text.classList.remove('animate-text'); // Remove the CSS class if not in view
+      about_text.classList.remove('animate-text'); 
     }
   }
 
