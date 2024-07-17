@@ -38,10 +38,10 @@
     <section id="hero" class="hero">
       <h1>DREAM IN COMFORT</h1>
       <p>Creating your perfect sleep sanctuary with us</p>
-      <button class="button_div">
+      <button class="button_div" data-scroll-to="category">
         <img src="./Assets/button.svg"/>      
       </button>
-      <section class="hero_pic">
+      <section class="hero_pic" id="parallax-section">
         <img src="./Assets/Hero-pic.png" />
       </section>
       <section class="about_quality">
@@ -56,7 +56,7 @@
     <section id="about" class="about">
       <div class="container">
         <h2>About sleepy shop</h2>
-        <p>
+        <p id="long-text">
           Sleepy is the perfect bedding store for anyone looking to give their
           bedroom a makeover. With a wide selection of linens including sheets,
           duvet covers, quilts and pillow cases, they have something to suit
@@ -65,7 +65,7 @@
           quality is second to none, with materials well-chosen for comfort and
           durability.
         </p>
-        <p id="read_more"><u>Read more</u></p>
+        <p id="read_more">Read more</p>
       </div>
       <div class="picture-about">
         <img src="./Assets/picture-about.png" alt="picture-about" />
@@ -97,28 +97,33 @@
             pillows are the perfect way to end each day.
           </p>
           <div class="pillow_display">
-            <div class="card"><img src="./Assets/pillow1.png" alt="pillow1" />
+            <div class="pillow_slider">
+            <div class="card">
+              <img src="./Assets/pillow1.png" alt="pillow1" />
               <div class="card_detail">
                 <span>Hotel Quality Pillow</span>
                 <span>$125</span>
                 <div> <img src="./Assets/cart_logo.svg" alt=""></div>
               </div>
             </div>
-            <div class="card"><img src="./Assets/pillow2.png" alt="pillow2" />
+            <div class="card">
+              <img src="./Assets/pillow2.png" alt="pillow2" />
               <div class="card_detail">
                 <span>Hotel Quality Pillow</span>
                 <span>$125</span>
                 <div><img src="./Assets/cart_logo.svg" alt="">
                 </div> </div>
             </div>
-            <div class="card"><img src="./Assets/pillow3.png" alt="pillow3" />
+            <div class="card">
+              <img src="./Assets/pillow3.png" alt="pillow3" />
               <div class="card_detail">
                 <span>Hotel Quality Pillow</span>
                 <span>$125</span>
                 <div> <img src="./Assets/cart_logo.svg" alt=""></div>
               </div>
             </div>
-            <div class="card"><img src="./Assets/pillow4.png" alt="pillow4" />
+            <div class="card">
+              <img src="./Assets/pillow4.png" alt="pillow4" />
               <div class="card_detail">
               <span>Hotel Quality Pillow</span>
               <span>$125</span>
@@ -126,11 +131,12 @@
             </div>
           </div>
           </div>
+          </div>
         </div>
       </div>
     </section>
     <section id="offer" class="offers">
-      <div>
+      <div class="main_image_div">
         <img class="main_image" src="./Assets/pillow 5.png" alt="pillow5" />
       </div>
       <div class="offer_detail">
@@ -140,9 +146,9 @@
             Our pillows are the perfect way to improve your sleep quality, and
             now there’s even more incentive to upgrade with our 70% off offer!
             Get cozy with a premium pillow that is soft, supportive, and durable
-            enough to last for years
+            enough to last for years.
           </p>
-          <img class="button_image" src="./Assets/button2.svg"/>
+          <img class="button_image" data-scroll-to="category" src="./Assets/button2.svg"/>
 
             
          
@@ -154,33 +160,115 @@
         <p>Our Blog</p>
         <img src="./Assets/Line 1.svg"></img>
       </div>
-      <div class="middle_part_blog">
-        <div class="benefits_of_pillow">
-          <p class="para_title">Benefits Of Good Pillow</p>
-          <p class="paragraph">
-            There has long been speculation about the impact that sleeping on a
-            quality pillow and seeing your dreams have on each other. Some
-            people believe that when you sleep on good pillows, it allows dream
-            energy to flow freely, allowing for clearer and more vivid dreams.
-            Others maintain that a good night's sleep is simply not possible
-            without a comfortable and supportive pillow setting up the right
-            environment. Whatever your opinion, it's hard to deny that the
-            connection between dreaming and pillows should not be overlooked.
-            After all, no matter what kind of mattress you may use, if your head
-            isn't comfortably supported by a good pillow at night – then restful
-            sleep and in-depth dreams will naturally suffer. So next time you're
-            in search of better quality bed linen, don't forget to invest in
-            some solid pillows too – they could just be the key to sweet
-            dreamland!
-          </p>
-          <p id="read_more"><u>Read more</u></p>
-        </div>
-        <div>
-          <img src="./Assets/Pic-blog.png" alt="Pic-blog" />
+      <div class="slider">
+        <div class="slides">
+          <div class="middle_part_blog">
+            <div class="benefits_of_pillow">
+              <p class="para_title">Benefits Of Good Pillow</p>
+              <p class="paragraph" id="text1" >
+                There has long been speculation about the impact that sleeping on a
+                quality pillow and seeing your dreams have on each other. Some
+                people believe that when you sleep on good pillows, it allows dream
+                energy to flow freely, allowing for clearer and more vivid dreams.
+                Others maintain that a good night's sleep is simply not possible
+                without a comfortable and supportive pillow setting up the right
+                environment. Whatever your opinion, it's hard to deny that the
+                connection between dreaming and pillows should not be overlooked.
+                After all, no matter what kind of mattress you may use, if your head
+                isn't comfortably supported by a good pillow at night – then restful
+                sleep and in-depth dreams will naturally suffer. So next time you're
+                in search of better quality bed linen, don't forget to invest in
+                some solid pillows too – they could just be the key to sweet
+                dreamland!
+              </p>
+              <p id="read_more" data-target="text1" class="read_more">Read more</p>
+            </div>
+            <div class="blog_img">
+              <img src="./Assets/Pic-blog.png" alt="Pic-blog" />
+            </div>
+          </div>
+          <div class="middle_part_blog">
+            <div class="benefits_of_pillow">
+              <p class="para_title">Benefits Of Good Pillow</p>
+              <p class="paragraph" id="text2">
+                There has long been speculation about the impact that sleeping on a
+                quality pillow and seeing your dreams have on each other. Some
+                people believe that when you sleep on good pillows, it allows dream
+                energy to flow freely, allowing for clearer and more vivid dreams.
+                Others maintain that a good night's sleep is simply not possible
+                without a comfortable and supportive pillow setting up the right
+                environment. Whatever your opinion, it's hard to deny that the
+                connection between dreaming and pillows should not be overlooked.
+                After all, no matter what kind of mattress you may use, if your head
+                isn't comfortably supported by a good pillow at night – then restful
+                sleep and in-depth dreams will naturally suffer. So next time you're
+                in search of better quality bed linen, don't forget to invest in
+                some solid pillows too – they could just be the key to sweet
+                dreamland!
+              </p>
+              <p id="read_more" data-target="text2" class="read_more">Read more</p>
+            </div>
+            <div>
+              <img src="./Assets/Pic-blog.png" alt="Pic-blog" />
+            </div>
+          </div>
+          <div class="middle_part_blog">
+            <div class="benefits_of_pillow">
+              <p class="para_title">Benefits Of Good Pillow</p>
+              <p class="paragraph"  id="text3" >
+                There has long been speculation about the impact that sleeping on a
+                quality pillow and seeing your dreams have on each other. Some
+                people believe that when you sleep on good pillows, it allows dream
+                energy to flow freely, allowing for clearer and more vivid dreams.
+                Others maintain that a good night's sleep is simply not possible
+                without a comfortable and supportive pillow setting up the right
+                environment. Whatever your opinion, it's hard to deny that the
+                connection between dreaming and pillows should not be overlooked.
+                After all, no matter what kind of mattress you may use, if your head
+                isn't comfortably supported by a good pillow at night – then restful
+                sleep and in-depth dreams will naturally suffer. So next time you're
+                in search of better quality bed linen, don't forget to invest in
+                some solid pillows too – they could just be the key to sweet
+                dreamland!
+              </p>
+              <p id="read_more" data-target="text3" class="read_more">Read more</p>
+            </div>
+            <div>
+              <img src="./Assets/Pic-blog.png" alt="Pic-blog" />
+            </div>
+          </div>
+          <div class="middle_part_blog">
+            <div class="benefits_of_pillow">
+              <p class="para_title">Benefits Of Good Pillow</p>
+              <p class="paragraph" id="text4" >
+                There has long been speculation about the impact that sleeping on a
+                quality pillow and seeing your dreams have on each other. Some
+                people believe that when you sleep on good pillows, it allows dream
+                energy to flow freely, allowing for clearer and more vivid dreams.
+                Others maintain that a good night's sleep is simply not possible
+                without a comfortable and supportive pillow setting up the right
+                environment. Whatever your opinion, it's hard to deny that the
+                connection between dreaming and pillows should not be overlooked.
+                After all, no matter what kind of mattress you may use, if your head
+                isn't comfortably supported by a good pillow at night – then restful
+                sleep and in-depth dreams will naturally suffer. So next time you're
+                in search of better quality bed linen, don't forget to invest in
+                some solid pillows too – they could just be the key to sweet
+                dreamland!
+              </p>
+              <p id="read_more" data-target="text4" class="read_more">Read more</p>
+            </div>
+            <div>
+              <img src="./Assets/Pic-blog.png" alt="Pic-blog" />
+            </div>
+          </div>
         </div>
       </div>
+     
       <div class="sidebar">
-        <img src="./Assets/slidebar.png" />
+        <img onclick="prevSlide()" src="./Assets/material-symbols_arrow-back-ios-new-rounded.svg" alt="">
+        <img src="./Assets/slider.svg" />
+        <img onclick="nextSlide()" src="./Assets/material-symbols_arrow-back-ios-new-rounded (1).svg" alt="">
       </div>
     </section>
     <section id="subscribe" class="subscribe">

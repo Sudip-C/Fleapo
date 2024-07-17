@@ -12,11 +12,14 @@ nav a{
     font-size: 20px;
     font-weight: 500;
     line-height: 24.8px;
-    text-align: left;
+    text-align: center;
     text-decoration: none;
     color: #F5F7FA;
-    padding: 0px 10px
-    ;
+    height: 61px;
+    width: 100px;
+    position: relative;
+    padding: 0px 10px ;
+    cursor: pointer;
 }
 .navbar{
 display: flex;
@@ -33,11 +36,27 @@ background-color:#12212E  ;
     justify-content: space-between;
     gap: 8px;
 }
+.nav_firstBlock a::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 10%;
+            right: 0;
+            height: 25px;
+            width: 84%;
+            background: url('./Assets/feather_vector.svg') no-repeat center/cover;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+}
+.nav_firstBlock a:hover::after{
+    opacity: 1;
+}
 .nav_secondBlock{
+
     display: flex;
-    gap: 5px;
+    gap: 10px;
     Padding:35px 66px 0px 0px;
-    align-items: end;
+    align-items: center;
     list-style: none;
 }
 .hero{
@@ -71,15 +90,26 @@ font-family: 'Sahitya',sans-serif;
     color: rgba(245, 247, 250, 1);
     height: 68px;
     width: 138px;
+    cursor: pointer;
 }
 
 .hero_pic{
     width: 95%;
+    height: 640px;
     display: flex;
     justify-content: center;
     background-image: url('./Assets/Feather-bg.png');
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero_pic img{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .about_quality{
     width: 46%;
@@ -90,29 +120,53 @@ font-family: 'Sahitya',sans-serif;
 .about_quality div{
     width: 30%;
 }
+.about_quality img{
+    transition: transform 0.2s linear;
+}
+.about_quality img:hover{
+transform:scale(1.1) ;
+}
 .about{
     font-family:'Cabinet Grotesk',sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: justify;
+    gap: 0px;
 }
 .container{
     margin-left:50px ;
     line-height: 40px;
+    height: 350px;
+    
 }
+.animate-text {
+    animation: slideInFromLeft 1.5s ease-out forwards; 
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 .container h2{
     font-size: 24px;
     line-height: 48px;
     font-weight: 700;
+    gap: 0px;
 }
-.container p{
+#long-text{
+    height: 220px;
     font-family: 'Cabinet Grotesk',sans-serif;
-font-size: 20px;
-font-weight: 400;
-line-height: 40px;
-text-align: justified;
-
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 38px;
+    text-align: justify;
 }
 #read_more{
 display: block;
@@ -121,7 +175,25 @@ font-family: 'Cabinet Grotesk',sans-serif;
 font-size: 22px;
 font-weight: 700;
 line-height: 44px;
+cursor: pointer;
+text-decoration: underline;
 }
+.animate-image {
+    animation: slideInFromRight 2s ease-in-out forwards; /* Example animation */
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
 .category{
     padding: 144px 64px 0px 64px;
 }
@@ -161,7 +233,7 @@ display: flex;
     background: linear-gradient(89.87deg, #436E7E 10.28%, #12212E 89.59%);
 }
 .description{
-    padding: 10px 20px;
+    padding: 10px 25px;
     background: linear-gradient(180.08deg, #12212E 41.88%, #375B68 92.6%);
     font-family: 'Cabinet Grotesk',sans-serif;
     border-radius: 0px 36px 36px 36px;
@@ -177,20 +249,23 @@ display: flex;
 
 }
 .pillow_display{
-    display: flex;
-    left: 42.1px;
-    padding: 4.86px 9.72px 4.86px 9.72px;
-    gap: 41px;
-
+    padding: 10px 20px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
-
+.pillow_slider{
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
  .card{
-    width: 50%;
+    /* width: 35%; */
     transition: transform 0.2s linear;
     border-radius: 20px 20px ;
     margin-top: 30px;
-    position: relative;
-    overflow: hidden;
+    /* position: relative;
+    overflow: hidden; */
 }
 .card_detail{
     height: 32px;
@@ -241,6 +316,7 @@ gap: 10px;
 .offers .button_image{
     position: relative;
    bottom: 20%;
+   cursor: pointer;
 }
 .offer_detail{
     height: 400px;
@@ -281,9 +357,10 @@ text-align: left;
 
 
 .blog{
-    height: 900px;
+
+    height: 1000px;
     width: 100%;
-    padding: 100px 64px 36px 64px;
+    padding: 70px 64px 20px 64px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -293,26 +370,49 @@ text-align: left;
     display: flex;
     align-items: center;
     gap: 10px;
+    padding-left: 15px;
 }
 .blog_title p{
-    font-family: 'Cabinet Grotesk',sans-serif;
+font-family: 'Cabinet Grotesk',sans-serif;
 font-size: 36px;
 font-weight: 800;
 line-height: 72px;
 text-align: left;
 color: rgba(94, 151, 171, 1);
 }
-
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 95%;
+    margin-bottom: 50px;
+}
+.slides{
+    display: flex;
+    transition: transform 0.5s ease-in;
+    gap: 0px;
+    height: 700px;
+}
 .middle_part_blog{
+    height: 85%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5px;
+    padding: 10px;
 }
 .benefits_of_pillow{
 display: flex;
 flex-direction: column;
-gap: 8px;
-
+height: 100%;
+width: 70%;
+}
+.blog_img{
+    width: 45%;
+}
+.blog_img img{
+    width: 90%;
 }
 .para_title{
     font-family: 'Cabinet Grotesk',sans-serif;
@@ -327,13 +427,13 @@ gap: 8px;
     font-weight: 500;
     line-height: 36px;
     text-align: left;
-
+    height: 80%;
 }
 .sidebar{
     display: flex;
     justify-content: center;
     align-items: center;
-
+    cursor: pointer;
 }
 
 .subscribe{
@@ -381,10 +481,10 @@ text-align: left;
     background-color: inherit;
     width:  169px;
 height:  68px;
+cursor: pointer;
 }
  
 .footer{
-    border: 2px soid red;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -437,12 +537,14 @@ color: rgba(245, 247, 250, 0.55);
 }
 .social_media{
     display: flex;
+    align-items: center;
     width: 210px;
     gap: 8px;
     position: relative;
     top:42% ;
     left: 80%;
     font-family: 'Cabinet Grotesk',sans-serif;
+    cursor: pointer;
 }
 .about_div{
 display:flex;
@@ -492,6 +594,7 @@ line-height: 19.84px;
 }
 .footer_items p:hover{
     cursor:pointer;
+    text-decoration: underline;
 }
 
 /* for medium screen*/
@@ -514,8 +617,13 @@ line-height: 19.84px;
         text-align: left;
         text-decoration: none;
         color: #F5F7FA;
-        padding: 0px 10px
-        ;
+        padding: 0px 10px;
+        height: 61px;
+    width: 100px;
+    position: relative;
+    padding: 0px 10px ;
+    cursor: pointer;
+        
     }
     .navbar{
         width: 100%;
@@ -527,12 +635,27 @@ line-height: 19.84px;
     background-color:#12212E  ;
     }
     .nav_firstBlock{
-        width: 772px;
+        width: 70%;
         padding:35px 50px 0px 50px;
         display: flex;
         justify-content: space-between;
         gap: 8px;
     }
+    .nav_firstBlock a::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        right: 0;
+        height: 25px;
+        width: 84%;
+        background: url('./Assets/feather_vector.svg') no-repeat center/cover;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+}
+.nav_firstBlock a:hover::after{
+opacity: 1;
+}
     .nav_secondBlock{
         display: flex;
         gap: 5px;
@@ -574,14 +697,20 @@ line-height: 19.84px;
     }
   
     .hero_pic{
-        width: 100%;
+        width: 95%;
+        height: 450px;
         background-image: url('./Assets/Feather-bg.png');
-        background-repeat:no-repeat;
-        background-size:cover;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
     }
     .hero_pic img{
         width: 100%;
-    }
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);    }
     .about_quality{
         display: flex;
         justify-content: center;
@@ -590,29 +719,57 @@ line-height: 19.84px;
     }
     .about_quality img{
         width: 100%;
+        transition: transform 0.2s linear;
     }
-    
+    .about_quality img:hover{
+        transform:scale(1.1) ;
+        }
     .about{
         font-family:'Cabinet Grotesk',sans-serif;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: justify;
+        gap: 20px;
     }
     .picture-about{
-        width: 45%;
+        width: 80%;
     }
     .picture-about img{
         width: 100%;
     }
     .container{
-        width: 50%;
+        width: 80%;
         line-height: 30px;
         font-size: 20px;
+        height: 350px;
     }
+    .animate-text {
+        animation: slideInFromLeft 1.5s ease-out forwards; 
+      }
+      
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
     .container h2{
         font-size: 36px;
         line-height: 48px;
+    }
+    #long-text{
+        height: 220px;
+        font-family: 'Cabinet Grotesk',sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: justify;
     }
     #read_more{
     display: block;
@@ -620,8 +777,25 @@ line-height: 19.84px;
     font-family: 'Cabinet Grotesk',sans-serif;
     font-size: 22px;
     font-weight: 700;
-    line-height: 44px;
+    line-height: 35px;
+    cursor: pointer;
+text-decoration: underline;
     }
+    .animate-image {
+        animation: slideInFromRight 2s ease-in-out forwards; /* Example animation */
+      }
+      
+      @keyframes slideInFromRight {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      
     .category{
         padding: 100px 40px 0px 40px;
     }
@@ -682,19 +856,25 @@ line-height: 19.84px;
     
     }
     .pillow_display{
-        display: flex;
-        left: 42.1px;
-        padding: 4.86px 9.72px 4.86px 9.72px;
-        gap: 41px;
+        padding: 10px 20px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
     
+    }
+    .pillow_slider{
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        transition: transform 0.5s ease-in-out;
     }
     .card{
         width: 50%;
         transition: transform 0.2s linear;
         border-radius: 20px 20px ;
         margin-top: 30px;
-        position: relative;
-        overflow: hidden;
+        /* position: relative;
+        overflow: hidden; */
     }
     .card_detail{
         height: 32px;
@@ -741,6 +921,7 @@ line-height: 19.84px;
     .offers .button_image{
         position: relative;
        bottom: 20%;
+       cursor: pointer;
     }
     .offer_detail{
         height: 300px;
@@ -807,6 +988,18 @@ line-height: 19.84px;
     text-align: left;
     
     }
+    .slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 600px;
+    }
+    .slides{
+        display: flex;
+        transition: transform 0.5s ease-in;
+        gap: 20px;
+        height: 600px;
+    }
     .blog_title img{
         width: 70%;
     }
@@ -840,13 +1033,12 @@ line-height: 19.84px;
         font-weight: 500;
         line-height: 25px;
         text-align: justify;
-    
     }
     .sidebar{
         display: flex;
         justify-content: center;
         align-items: center;
-    
+        cursor: pointer;
     }
     
     .subscribe{
@@ -899,13 +1091,12 @@ line-height: 19.84px;
     color: white;
     border: none;
     }
-    .subscribe_button div{
-    width: 58.14px;
-    height: 58.14px;
-    top: 4.93px;
-    left: 4.93px;
-    border-radius: 50%;
-    border: 1px solid white;
+    .subscribe_button {
+        border: none;
+        background-color: inherit;
+        width:  169px;
+    height:  68px;
+    cursor: pointer;
     }
      
     .footer{
@@ -933,6 +1124,7 @@ line-height: 19.84px;
         position: relative;
         top:42% ;
         left: 70%;
+        cursor: pointer;
         font-family: 'Cabinet Grotesk',sans-serif;
     }
     .copyright{
@@ -1010,9 +1202,11 @@ line-height: 19.84px;
         font-weight: 400;
         font-size: 12px;
         line-height: 20px;
+        cursor: pointer;
     }
     .footer_items p:hover{
         cursor:pointer;
+        text-decoration: underline;
     }
         
 }
@@ -1037,9 +1231,11 @@ line-height: 19.84px;
         text-align: left;
         text-decoration: none;
         color: #F5F7FA;
-        padding: 0px 10px
-        ;
+        position: relative;
+    padding: 0px 10px ;
+    cursor: pointer;
     }
+    
     .navbar{
         width: 100%;
     display: flex;
@@ -1049,20 +1245,39 @@ line-height: 19.84px;
     font-family:'Cabinet Grotesk',sans-serif;
     background-color:#12212E  ;
     }
-    .nav_firstBlock{
+.nav_firstBlock{
         width: 772px;
         padding:35px 50px 0px 50px;
         display: flex;
         justify-content: space-between;
         gap: 8px;
     }
-    .nav_secondBlock{
+.nav_firstBlock a::after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        right: 0;
+        height: 25px;
+        width: 80%;
+        background: url('./Assets/feather_vector.svg') no-repeat center/cover;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+}
+.nav_firstBlock a:hover::after{
+opacity: 1;
+}
+.nav_secondBlock{
         display: flex;
-        gap: 5px;
-        Padding:35px 66px 0px 0px;
-        align-items: end;
+        gap: 15px;
+        Padding:20px 40px 0px 0px;
+        align-items: center;
         list-style: none;
+        height: 100px;
     }
+.nav_secondBlock img{
+    width: 125%;
+}
     .hero{
         display: flex;
         flex-direction: column;
@@ -1122,28 +1337,84 @@ line-height: 19.84px;
         align-items: center;
         text-align: justify;
     }
+    .about_quality img{
+        width: 100%;
+        transition: transform 0.2s linear;
+    }
+    .about_quality img:hover{
+        transform:scale(1.1) ;
+        }
+
+    .about{
+            font-family:'Cabinet Grotesk',sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: justify;
+            gap: 20px;
+    }
     .picture-about{
-        width: 45%;
+        width: 80%;
     }
     .picture-about img{
         width: 100%;
     }
     .container{
-        width: 50%;
+        width: 80%;
         line-height: 30px;
         font-size: 20px;
+        padding: 10px;
     }
     .container h2{
         font-size: 36px;
         line-height: 48px;
     }
+    .animate-text {
+        animation: slideInFromLeft 1.5s ease-out forwards; 
+      }
+      
+      @keyframes slideInFromLeft {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .animate-image {
+        animation: slideInFromRight 2s ease-in-out forwards; /* Example animation */
+      }
+      
+      @keyframes slideInFromRight {
+        0% {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    #long-text{
+        height: 230px;
+        font-family: 'Cabinet Grotesk',sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: justify;
+    }
     #read_more{
-    display: block;
-    text-align: right;
-    font-family: 'Cabinet Grotesk',sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 44px;
+        display: block;
+        text-align: right;
+        font-family: 'Cabinet Grotesk',sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 35px;
+        cursor: pointer;
+    text-decoration: underline;
     }
     .category{
         padding: 100px 40px 0px 40px;
@@ -1255,11 +1526,13 @@ line-height: 19.84px;
      width:100%;
     height: 760px;
     padding: 100px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
     }
-    .offers .main_image{
-        width: 100%;
-        position: absolute;
-        height: 624px;
+     .main_image_div{
+        width:100%;
+        height: 500px;
+        position: relative;
     }
     .offers .button_image{
         position: relative;
@@ -1273,13 +1546,13 @@ line-height: 19.84px;
         justify-content: space-between;
         position: relative;
         left: 47.5%;
-        top: 18%;
+        bottom: 35%;
     }
     .offer_title{
     width: fit-content;
     height: 55px;
-    top: 75px;
-    left: 684px;
+    top: 70px;
+    left: 47.5%;
     font-family: 'Cabinet Grotesk',sans-serif;
     font-size: 35px;
     font-weight: 700;
@@ -1289,7 +1562,7 @@ line-height: 19.84px;
     .offer_desc{
     width: 441px;
     height: 197px;
-    top: 214px;
+    top: 35%;
     left: 47%;
     font-family: 'Cabinet Grotesk',sans-serif;
     font-size: 18px;
@@ -1307,12 +1580,12 @@ line-height: 19.84px;
         top: 50%;
     }
     .blog{
-        height: 900px;
+        height: 1000px;
         width: 100%;
-        padding: 50px 30px 36px 30px;
+        padding: 50px 30px 25px 36px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     
     .blog_title{
@@ -1320,6 +1593,7 @@ line-height: 19.84px;
         align-items: center;
         justify-content: center;
         gap: 2px;
+        padding: 0px 0px 0px 60px;
     }
     .blog_title p{
         width: 30%;
@@ -1333,13 +1607,28 @@ line-height: 19.84px;
     .blog_title img{
         width: 70%;
     }
-    .middle_part_blog{
+    .slider {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 700px;
+    }
+    .slides{
         display: flex;
+        transition: transform 0.5s ease-in;
+        gap: 0px;
+        height: 700px;
+        width: 100%;
+    }
+    .middle_part_blog{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5px;
     }
     .benefits_of_pillow{
+    height: 60%;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -1348,7 +1637,8 @@ line-height: 19.84px;
     padding: 10px;
     }
     .middle_part_blog img{
-        width: 100%;
+        width: 60%;
+        filter: drop-shadow(10px 5px 10px #000);
     }
     .para_title{
         font-family: 'Cabinet Grotesk',sans-serif;
@@ -1359,11 +1649,11 @@ line-height: 19.84px;
     }
     .paragraph{
         font-family: "Cabinet Grotesk",sans-serif;
-        font-size: 15px;
-        font-weight: 500;
+        font-size: 16px;
+        font-weight: 300;
         line-height: 25px;
         text-align: justify;
-    
+        height: 300px;
     }
     .sidebar{
         display: flex;
