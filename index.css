@@ -29,6 +29,9 @@ color: #F5F7FA;
 font-family:'Cabinet Grotesk',sans-serif;
 background-color:#12212E  ;
 }
+.navbar-toggle{
+    display: none;
+}
 .nav_firstBlock{
     width: 772px;
     padding:35px 66px 0px 66px;
@@ -52,10 +55,9 @@ background-color:#12212E  ;
     opacity: 1;
 }
 .nav_secondBlock{
-
     display: flex;
     gap: 10px;
-    Padding:35px 66px 0px 0px;
+    Padding:32px 66px 10px 0px;
     align-items: center;
     list-style: none;
 }
@@ -622,8 +624,10 @@ line-height: 19.84px;
     width: 100px;
     position: relative;
     padding: 0px 10px ;
-    cursor: pointer;
-        
+    cursor: pointer; 
+    }
+    .navbar-toggle{
+        display: none;
     }
     .navbar{
         width: 100%;
@@ -648,7 +652,7 @@ line-height: 19.84px;
         left: 10%;
         right: 0;
         height: 25px;
-        width: 84%;
+        width: 85%;
         background: url('./Assets/feather_vector.svg') no-repeat center/cover;
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -659,8 +663,8 @@ opacity: 1;
     .nav_secondBlock{
         display: flex;
         gap: 5px;
-        Padding:35px 66px 0px 0px;
-        align-items: end;
+        Padding:24px 66px 16px 0px;
+        align-items: center;
         list-style: none;
     }
     .hero{
@@ -1225,15 +1229,17 @@ text-decoration: underline;
     }
     nav a{
         font-family: 'Cabinet Grotesk',sans-serif;
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 500;
         line-height: 24.8px;
-        text-align: left;
+        text-align: center;
         text-decoration: none;
         color: #F5F7FA;
         position: relative;
-    padding: 0px 10px ;
+    padding: 0px 5px ;
     cursor: pointer;
+    width: 100px;
+
     }
     
     .navbar{
@@ -1245,21 +1251,36 @@ text-decoration: underline;
     font-family:'Cabinet Grotesk',sans-serif;
     background-color:#12212E  ;
     }
-.nav_firstBlock{
-        width: 772px;
-        padding:35px 50px 0px 50px;
+    .navbar-toggle .bar {
+        height: 3px;
+        width: 30px;
+        background-color: #fff;
+        margin: 4px 0;
+      }
+      .navbar-toggle {
         display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 20px;
+      }
+      
+.nav_firstBlock{
+        width: 80%;
+        padding:15px 20px 0px 20px;
+        display: none;
+        flex-direction: column;
         justify-content: space-between;
+        align-items: center;
         gap: 8px;
     }
 .nav_firstBlock a::after{
         content: '';
         position: absolute;
         bottom: 0;
-        left: 10%;
+        left: 12%;
         right: 0;
         height: 25px;
-        width: 80%;
+        width: 75%;
         background: url('./Assets/feather_vector.svg') no-repeat center/cover;
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -1267,10 +1288,13 @@ text-decoration: underline;
 .nav_firstBlock a:hover::after{
 opacity: 1;
 }
+.nav_firstBlock.active  {
+    display: flex;
+  }
 .nav_secondBlock{
         display: flex;
         gap: 15px;
-        Padding:20px 40px 0px 0px;
+        Padding:10px 20px 0px 0px;
         align-items: center;
         list-style: none;
         height: 100px;
@@ -1312,13 +1336,20 @@ opacity: 1;
     }
   
     .hero_pic{
-        width: 100%;
+        width: 95%;
+        height: 450px;
         background-image: url('./Assets/Feather-bg.png');
-        background-repeat:no-repeat;
-        background-size:cover;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        position: relative;
     }
     .hero_pic img{
         width: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .about_quality{
         display: flex;
@@ -1476,19 +1507,23 @@ opacity: 1;
     
     }
     .pillow_display{
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .pillow_slider{
+        width: 100%;
         display: flex;
-        left: 42.1px;
-        padding: 4.86px 9.72px 4.86px 9.72px;
-        gap: 41px;
-    
+        gap: 8px;
+        transition: transform 0.5s ease-in-out;
     }
     .card{
         width: 50%;
         transition: transform 0.2s linear;
         border-radius: 20px 20px ;
         margin-top: 30px;
-        position: relative;
-        overflow: hidden;
+        /* position: relative;
+        overflow: hidden; */
     }
     .card_detail{
         height: 32px;
@@ -1534,9 +1569,11 @@ opacity: 1;
         height: 500px;
         position: relative;
     }
+   
     .offers .button_image{
         position: relative;
        bottom: 20%;
+       width: 30%;
     }
     .offer_detail{
         height: 300px;
@@ -1554,9 +1591,9 @@ opacity: 1;
     top: 70px;
     left: 47.5%;
     font-family: 'Cabinet Grotesk',sans-serif;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 700;
-    line-height: 45px;
+    line-height: 30px;
     text-align: left;
     }
     .offer_desc{
@@ -1565,9 +1602,9 @@ opacity: 1;
     top: 35%;
     left: 47%;
     font-family: 'Cabinet Grotesk',sans-serif;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 24px;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 18px;
     text-align: left;
 
     }
@@ -1593,7 +1630,7 @@ opacity: 1;
         align-items: center;
         justify-content: center;
         gap: 2px;
-        padding: 0px 0px 0px 60px;
+        padding: 0px 0px 0px 50px;
     }
     .blog_title p{
         width: 30%;
@@ -1665,11 +1702,11 @@ opacity: 1;
     .subscribe{
         width: 100%;
         height: 601px;
-        padding: 50px 100px 10px 100px;
+        padding: 50px 70px 10px 70px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 49px;
+        gap: 30px;
     }
     .subscribe .p1{
         font-family: 'Cabinet Grotesk',sans-serif;
@@ -1680,7 +1717,7 @@ opacity: 1;
     
     }
     .subscribe .p2{
-        width: 438px;
+        width: 100%;
         font-family: 'Cabinet Grotesk',sans-serif;
         font-size: 20px;
         font-weight: 400;
@@ -1689,7 +1726,7 @@ opacity: 1;
     
     }
     .subscribe input{
-    width:768px;
+    width:100%;
     height:  81px;
     padding: 8px 38px 8px 38px;
     gap: 10px;
@@ -1741,29 +1778,34 @@ opacity: 1;
     }
     .social_media{
         display: flex;
-        width: 210px;
+        width: 38%;
         gap: 8px;
         position: relative;
         top:42% ;
-        left: 70%;
+        left: 60%;
         font-family: 'Cabinet Grotesk',sans-serif;
+        font-size: 10px;
+    }
+    .social_media img{
+        width: 15%;
     }
     .copyright{
         position: absolute;
         left: 30%;
         top: 85%;
         text-align: center;
+        width: 35%;
     }
 
     .created_by{
         font-family: 'sahitya',sans-serif;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 20.48px;
     }
     .copyright_note{
         font-family: 'sahitya',sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 20.48px;
     }
@@ -1775,9 +1817,9 @@ opacity: 1;
         width: 69%;
         height: 228px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
-        gap: 25px;
+        gap: 15px;
     }
     .about_div{
     display:flex;
@@ -1809,19 +1851,19 @@ opacity: 1;
     line-height: 19.84px;
     }
     .contact_section > img{
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
     }
     .footer_items h3{
         font-family: 'Cabinet Grotesk',sans-serif;
         font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 20px;
     }
     .footer_items p{
         font-family: 'Sahitya',sans-serif;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 20px;
     }
     .footer_items p:hover{

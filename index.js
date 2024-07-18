@@ -209,3 +209,14 @@ function animateText() {
 // Listen for scroll events and animate image when in viewport
 window.addEventListener('scroll', animateText);
 window.addEventListener('scroll', animateImage);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navbarLinks = document.querySelector('.nav_firstBlock');
+
+  mobileMenu.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active');
+    console.log("clicked")
+  });
+});
